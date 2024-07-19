@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image:url("Index2_back.jpg");
+    background-size: cover;;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; 
+    height: 100vh; 
+    margin: 0; 
+    
+}
+
+.counter-container {
+    background: #828181b1;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow:  5px 18px rgba(28, 26, 26, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+p {
+    font-size:3rem;
+    color: #000000;
+}
+
+#display {
+    font-style: normal;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#increment {
+    background-color: #16b61b;
+    color: #fff;
+}
+
+
+button#decrement {
+    background-color: #f41303;
+    color: #fff;
+}
+
+
+button#reset {
+    background-color: #ffd900;
+    color: #fff;
+}
+
+
+@media (max-width: 600px) {
+    .counter-container {
+        width: 90%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('Pics/Index3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+    background:#ffffffa2;
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    box-shadow:  0 5px rgba(0, 0, 0, 0.4);
+}
+
+header h1 {
+    margin-right: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.auth-container, .dashboard-container {
+    background:#ffffffa2;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    margin-top: 5rem;
+}
+
+h2, h3 {
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+form, .dashboard-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.4);
+}
+
+button:hover {
+    background-color: #237df2;
+    font-weight: bold;
+}
+
+p {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #333;
+}
+
+a {
+    color: #067eff;
+    text-decoration:solid,line-through;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-content section {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%;
+}
+
+.dashboard-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dashboard-content ul li {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f9f9f984;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+        margin-right: 1rem;
+    }
+
+    .auth-container, .dashboard-container {
+        width: 80%;
+        padding: 1.5rem;
+        margin-top: 6rem;
+    }
+
+    h2, h3 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .dashboard-content section {
+        margin-bottom: 1rem;
+    }
+
+    .dashboard-content ul li {
+        font-size: 0.9rem;
+    }
+}
