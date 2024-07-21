@@ -1,87 +1,238 @@
-* {
+html {
+    scroll-behavior:smooth;
+    height: 100%;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image:url("Index2_back.jpg");
-    background-size: cover;;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; 
-    height: 100vh; 
-    margin: 0; 
-    
-}
-
-.counter-container {
-    background: #828181b1;
-    padding: 3rem;
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
     text-align: center;
-    border-radius: 10px;
-    box-shadow:  5px 18px rgba(28, 26, 26, 0.7);
-    backdrop-filter: blur(5px);
+    align-items: center;
+    background-color: white;
+    color: black;
+    margin: 0;
 }
 
-p {
-    font-size:3rem;
-    color: #000000;
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+
+header {
+    background-color: black;
+    font-size: 1em;
+    text-align: left;
+    color: white;
+    padding: 10px;
 }
 
-#display {
-    font-style: normal;
-    font-size: 5rem;
-    margin-bottom: 1rem;
-    color: #000000;
+header h1 {
+    margin: 0;
+    display: inline-block;
+}
+
+nav {
+    float: inline-end;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+}
+
+main {
+    flex: 1;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    align-content: center;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+#display{
+    font-size: 5em;
+    align-items: center;
+    margin-bottom: 0.5cap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    align-content: center;
+    text-align: center;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
 }
 
 button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    width: 3cm;
+    background-color: black;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 20px;
 }
 
-button#increment {
-    background-color: #16b61b;
+button:hover {
+    background-color: gray;
+}
+
+footer {
+    background-color: black;
     color: #fff;
+    text-align: center;
+    padding: 1rem 2.5rem;
 }
 
-
-button#decrement {
-    background-color: #f41303;
-    color: #fff;
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px;
 }
 
+@media (max-width: 728px) {
+    body {
+        overflow-y: scroll;
+        align-items: center;
+        font-size: 14px;
+    }
 
-button#reset {
-    background-color: #ffd900;
-    color: #fff;
-}
+    header {
+        font-size: 0.6em;
+        padding: 5px;
+    }
 
+    nav {
+        float: inline-end;
+        padding: 10px;
+    }
+    
+    nav a {
+        color: white;
+    }
+    
 
-@media (max-width: 600px) {
-    .counter-container {
-        width: 90%;
+    main {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    
+    #display{
+        font-size: 5em;
+        align-items: center;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
     }
 
     .buttons {
         flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 
     button {
-        margin-bottom: 0.5rem;
+        padding: 5px 10px;
+        font-size: 0.8em;
+        border-radius: 10px;
     }
+
+    footer {
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 2.5rem;
+      }
+}
+
+
+@media (max-width: 600px) {
+    body {
+        overflow-y: scroll;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    header {
+        font-size: 0.6em;
+        padding: 5px;
+    }
+
+    nav {
+        float: inline-end;
+        padding: 5px;
+    }
+    
+    nav a {
+        color: white;
+    }
+    
+    main {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+    
+    #display{
+        font-size: 5em;
+        align-items: center;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        border-radius: 10px;
+    }
+
+    footer {
+        
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 2.5rem;
+      }
 }
